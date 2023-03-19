@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        :root{
+            --prussian-blue: #012a4aff;
+            --indigo-dye: #013a63ff;
+            --indigo-dye-2: #01497cff;
+            --usafa-blue: #014f86ff;
+            --honolulu-blue: #2a6f97ff;
+            --celadon-blue: #2c7da0ff;
+            --blue-green: #468fafff;
+            --maximum-blue: #61a5c2ff;
+            --dark-sky-blue: #89c2d9ff;
+            --light-blue: #a9d6e5ff;
+             --baby-blue-eyes: #a3cef1ff;
+            --yale-blue: #274c77ff;
+        }
+        body{
+            background-color: var(--cultured);
+            margin: 4px, 4px;
+            padding: 4px;
+            white-space: normal; 
+        }
+        h1{
+            color: white;
+            font-family: 'Cabin', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        label{
+            
+            color: var(--indigo-dye);
+        }
+        input,textarea,::placeholder{
+            border: none;
+            color: var(--indigo-dye);
+            text-align: center;
+            font-family: sans-serif;
+            border-radius: 10px;
+            font-size: 12px;
+            padding: 3px;
+        }
+        .box{
+            background-color: var(--dark-sky-blue);
+            display:flex ;
+            align-items: center;
+            justify-content:center ;
+           font-size: 10px;
+            /* padding: 20px;
+            margin: auto;
+            left: 80vh;*/
+        }
+        .sub:hover {
+            background-color: var(--celadon-blue);  
+            color: white;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .sub{
+            padding: 10px;
+            border-radius: 20px;
+            margin: 5px;
+            width:35%
+            
+        }
+        .hero-title{
+            color: white;
+            background-color: var(--prussian-blue);
+            border-radius: 20px;
+        }            .navbar {
+        height: 8%;
+        width: 100%;
+        background-color: var(--baby-blue-eyes);
+    }
+    
+    #navbar-nav mr-auto {
+        font-size: 20px;
+        color: white;
+    }
+    a{
+    text-decoration: none;
+}
+
+#footer_ele{
+    margin-top: 20px;
+    letter-spacing: 4px;
+
+}
+ li{
+display: inline;
+padding-left:10px;
+padding-right: 10px;
+
+}
+a:hover{
+    color: var(--baby-blue-eyes);
+    transition: all;
+   
+    transform: translateY(-1px);
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="hero-title">
+
+        <h3 style="font-family: 'Kodchasan', sans-serif;
+        text-align: right; position: relative; right: 100px; top: 20px;">Rent a cycle</h3>
+        <h1>Feedback</h1>
+    </div>
+    <div class="box">
+    <form >
+        <br><br>
+        <label for=""><span style="color: red;">*</span> Name: </label><br><br>
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <br><br>
+        <label for=""><span style="color: red;">*</span> Personal Email: </label><br><br>
+        <input type="email" placeholder="Email" required>
+        <br><br>
+        <label for=""><span style="color: red;">*</span> Phone: </label><br><br>
+        <input type="number" placeholder="Phone" minlength="10" required >
+        <br><br>
+        <label for="">Comment: </label>
+        <br><br>
+        <textarea cols="48" rows="5" ></textarea>
+        <br><br><br>
+        <center>
+            <input class="sub" type="submit" onsubmit="alert('Thank You Your feedback is recorded')" >
+            <input class="sub" type="reset" ></center>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div><nav class="navbar fixed-bottom navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Rent-a-Cycle</a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+<div class="collapse navbar-collapse"
+id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active">
+<a class="nav-link" href="#">
+    Home
+    <span class="sr-only">
+        (current)
+    </span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="product.html">
+    Products
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="login.html">
+    Login
+</a>
+</li> <li class="nav-item">
+<a class="nav-link" href="signup.html">
+    Register
+</a>
+</li> <li class="nav-item">
+<a class="nav-link" href="feedback.html">
+    Feedback
+</a>
+</li>
+</ul>
+
+
+</div>
+
+<footer>
+<br>
+<div class="footer1">
+<ul class="footer_ele">
+<li><a href="">About</a></li>
+<li><a href="terms.html">Terms and Conditions</a></li>
+<li>©Pedal On by FullStackers</li>
+</ul>
+</div>
+</footer>
+</body>
+<link rel="stylesheet"
+href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity=
+"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous">
+</script>
+
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity=
+"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+</script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+    </script>
+</html>
