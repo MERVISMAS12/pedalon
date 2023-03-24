@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"></link>
+ 
+    <style>
+        :root{
+            --prussian-blue: #012a4aff;
+            --indigo-dye: #013a63ff;
+            --indigo-dye-2: #01497cff;
+            --usafa-blue: #014f86ff;
+            --honolulu-blue: #2a6f97ff;
+            --celadon-blue: #2c7da0ff;
+            --blue-green: #468fafff;
+            --maximum-blue: #61a5c2ff;
+            --dark-sky-blue: #89c2d9ff;
+            --light-blue: #a9d6e5ff;
+            --baby-blue-eyes: #a3cef1ff;
+            --yale-blue: #274c77ff;
+        }
+        
+        body{
+            background-color: lightgray;  
+            margin: 4px, 4px;
+            padding: 4px;
+            white-space: normal;
+        }
+        h1{
+            color: white;
+            font-family: 'Cabin', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero-title{
+            color: white;
+            background-color: var(--prussian-blue);
+            border-radius: 20px;
+        }
+        .main_container{
+            background-color: var(--light-blue);
+            
+        }
+        .row_container{
+            background-color: lightgray;
+          display : flex;
+            justify-content : space-between;
+            align-items : center;
+            padding: 20px;
+
+        }
+        .element_container{
+            background-color: white;
+            position: flex;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .outofstock, .available{
+            
+            overflow: hidden;
+            background-color: #ff8600ff;
+            border-radius: 2px;
+            text-align: center;
+            color: #ffffff;   
+            padding-left: 5px;
+            padding-right: 5px;     
+            display: none;   
+        }
+        .outofstock{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .available{
+            background-color: var(--prussian-blue);
+            color: white;
+            position: absolute;
+            right: 10px;
+            
+        }
+        .cycle_type{
+            color: black;
+        }
+        .pre_book{
+            background-color: gray;
+            color: white;
+            padding: 5px;
+            border-radius: 2px;
+
+        }
+        .payment {
+            width: 500px;
+            height: 560px;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 10px 50px;
+            flex-direction: column;
+            -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+            }
+
+            .payTitle {
+            font-size: 20px;
+            color: lightgray;
+            }
+
+            label {
+            font-size: 14px;
+            font-weight: 300;
+            }
+
+            .payInput {
+            padding: 10px;
+            margin: 10px 0px;
+            border: none;
+            border-bottom: 1px solid gray;
+            }
+
+            .payInput::placeholder {
+            color: rgb(163, 163, 163);
+            }
+
+            .cardIcons {
+            display: flex;
+            }
+
+            .cardIcon {
+            margin-right: 10px;
+            }
+
+            .cardInfo {
+            display: flex;
+            justify-content: space-between;
+            }
+
+            .sm {
+            width: 30%;
+            }
+
+            .payButton {
+            position: absolute;
+            height: 40px;
+            top: 560px;
+            width: 100%;
+            left: 0;
+            -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+            background-color: #369e62;
+            color: white;
+            border: none;
+            cursor: pointer;
+            }
+
+            .close {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: gray;
+            color: white;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 2px;
+            }
+            
+            .productButton {
+            float: right;
+            padding: 8px 10px;
+            background-color: black;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            }
+
+            .productButton:hover {
+            background-color: white;
+            color: black;
+            }
+            .navbar {
+        height: 8%;
+        width: 100%;
+        background-color: var(--baby-blue-eyes);
+    }
+    
+    #navbar-nav mr-auto {
+        font-size: 20px;
+        color: white;
+    }
+    a{
+    text-decoration: none;
+}
+
+#footer_ele{
+    margin-top: 20px;
+    letter-spacing: 4px;
+
+}
+ li{
+display: inline;
+padding-left:10px;
+padding-right: 10px;
+
+}
+a:hover{
+    color: var(--baby-blue-eyes);
+    transition: all;
+   
+    transform: translateY(-1px);
+}
+.price,span{
+    font-size: 13.5px;
+display: absolute;
+top:0;
+    
+}
+.log {
+	text-decoration: none;
+	float: right;
+  color: white;
+  background-color: black;
+}
+    </style>
+</head>
+<body>
+  
+  
+
+    <div class="hero-title">
+
+        <h3 style="font-family: 'Kodchasan', sans-serif;
+        text-align: right; position: relative; right: 100px; top: 20px;">Rent a cycle</h3>
+        <span style="float: right; padding-right: 105px;">
+            <br>
+            <h5  id="profile" >user loged in</h5>
+            <button class="log" id="logout">Log out</button>
+           
+        </span>
+        
+        <center><h1>Products</h1></center>
+    </div>
+    
+
+   
+    <select  class="form-select form-select-lg mb-3" style="width: 200px; position: absolute; right: 20px;"  id="cart" aria-label=".form-select-lg example">
+      <option data-icon="glyphicon-shopping-cart" selected hidden data-icon="cart.svg">My cycles</option>
+    </select> 
+    <br><br>
+    <div class="main_container">
+        <div class="row_container" id="row1">
+            <div class="element_container card"  title="Street Racer
+            
+            Speed: Non Gear 
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 26 Inches
+            ">
+                <a > <img src="pic1.png" id="pic" alt="street racer" width="300px;" >
+                    <div class="outofstock"  id="outofstock0">  Booked </div>
+                    <div class="available" id="available0"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Street Racer</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 5'4 to 5'10 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue)">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color: var(--prussian-blue);"> ₹</span> <span class="price">50</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button type="button" class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+                <script></script>
+            </div>
+
+            <div class="element_container card" title="Kross Eco
+            
+            Speed: Non Gear 
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 26 Inches
+            ">
+                <a> <img src="pic2.png" id="pic" alt="Kross Eco" width="300px;">
+                    <div class="outofstock" id="outofstock1">  Booked </div>
+                    <div class="available" id="available1"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Kross Eco</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 5'4 to 5'10 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue)">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color:var(--prussian-blue)"> ₹</span> <span class="price">50</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="element_container card" title="Atlas Mettle
+            
+            Speed: Non Gear
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 24 Inches
+            ">
+                <a > <img src="pic3.png" id="pic" alt="Atlas Mettle" width="300px;">
+                    <div class="outofstock" id="outofstock2">  Booked </div>
+                    <div class="available" id="available2"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Atlas Mettle</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 4'8 to 5'2 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue);">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color:var(--prussian-blue);"> ₹</span> <span class="price">70</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+                <script></script>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+        <div class="row_container" id="row2">
+            <div class="element_container card" title="Hercules Brut
+            
+            Speed: Non Gear 
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 24 Inches
+            ">
+                <a> <img src="pic4.png" id="pic" alt="Hercules Brut" width="300px;">
+                    <div class="outofstock" id="outofstock3">  Booked </div>
+                    <div class="available" id="available3"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Hercules Brut</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 4'10 to 5'2 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue)">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color: var(--prussian-blue);"> ₹</span> <span class="price">70</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+                <script></script>
+            </div>
+
+            <div class="element_container card" title="Hercules Roadeo Hank
+            
+            Speed: Non Gear 
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: Disc Brakes
+            Tyre Size: 24 Inches
+            ">
+                <a> <img src="pic5.png" id="pic" alt="Hercules Roadeo Hank" width="300px;">
+                    <div class="outofstock" id="outofstock4">  Booked </div>
+                    <div class="available" id="available4"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Hercules Roadeo Hank</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 4'10 to 5'4 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue)">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color:var(--prussian-blue)"> ₹</span> <span class="price">70</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="element_container card" title="Hero Sprint Tomboy
+
+            
+            Speed: Non Gear
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 26 Inches
+            ">
+                <a > <img src="pic6.png" id="pic" alt="Hero Sprint Tomboy" width="300px;">
+                    <div class="outofstock" id="outofstock5">  Booked </div>
+                    <div class="available" id="available5"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Hero Sprint Tomboy</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 5'3 to 5'6 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue);">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color:var(--prussian-blue);"> ₹</span> <span class="price">70</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+                <script></script>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+        <div class="row_container" id="row3">
+            <div class="element_container card" title="Xtal Muse
+            
+            Speed: Non Gear 
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 26 Inches
+            ">
+                <a> <img src="pic7.png" id="pic" alt="Xtal Muse" width="300px;">
+                    <div class="outofstock" id="outofstock6">  Booked </div>
+                    <div class="available" id="available6"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Xtal Muse</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 5'2 to 5'6 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue)">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color: var(--prussian-blue);"> ₹</span> <span class="price">70</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+                <script></script>
+            </div>
+
+            <div class="element_container card" title="Hercules FX 100
+            
+            Speed: Non Gear 
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 26 Inches
+            ">
+                <a> <img src="pic8.png" id="pic" alt="Hercules FX 100" width="300px;">
+                    <div class="outofstock" id="outofstock7">  Booked </div>
+                    <div class="available" id="available7"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Hercules FX 100</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 5'3 to 5'8 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue)">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color:var(--prussian-blue)"> ₹</span> <span class="price">70</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="element_container card" title="Hercules Rocky
+            
+            Speed: Non Gear
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 24 Inches
+            ">
+                <a> <img src="pic9.png" id="pic" alt="Hercules Rocky" width="300px;">
+                    <div class="outofstock" id="outofstock8">  Booked </div>
+                    <div class="available" id="available8"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Hercules Rocky</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 4'10 to 5'3 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue);">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color:var(--prussian-blue);"> ₹</span> <span class="price">70</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+                <script></script>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+        <div class="row_container" id="row4">
+            <div class="element_container card" title="Btwin My Bike
+            
+            Speed: Non Gear 
+            Type: Hybrid
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 26 Inches
+            ">
+                <a> <img src="pic10.png" id="pic" alt="Btwin My Bike" width="300px;">
+                    <div class="outofstock" id="outofstock9">  Booked </div>
+                    <div class="available" id="available9"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Btwin My Bike</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> Hybrid &nbsp;|&nbsp; 5'3 to 5'9 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue)">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color: var(--prussian-blue);"> ₹</span> <span class="price">90</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+                <script></script>
+            </div>
+
+            <div class="element_container card" title="Hero Ranger
+            
+            Speed: Non Gear 
+            Type: Mountain Bike
+            Seat: Adjustable
+            Brakes: V Brakes
+            Tyre Size: 26 Inches
+            ">
+                <a> <img src="pic11.png" id="pic" alt="Hero Ranger" width="300px;">
+                    <div class="outofstock" id="outofstock10">  Booked </div>
+                    <div class="available" id="available10"> Available from : 14 Mar 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Hero Ranger</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 5'3 to 5'9 ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue)">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color:var(--prussian-blue)"> ₹</span> <span class="price">90</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="element_container card" title="Btwin Riverside 50
+            
+            Speed: Non Gear
+            Type: Hybrid
+            Seat: Adjustable
+            Brakes: Power Brakes
+            Tyre Size: 700 C
+            ">
+                <a > <img src="pic12.png" id="pic" alt="Btwin Riverside 50" width="300px;">
+                    <div class="outofstock" id="outofstock11">  Booked </div>
+                    <div class="available" id="available11"> Available from : 14-03- 23 </div>
+                    <div class="tag" id="tag">
+                     <p style="color: var(--indigo-dye-2); font-size: 12px;"> Non Gear </p> 
+                    </div>
+                    <h4 class="cycle_type" id="cycle_type">Btwin Riverside 50</h4>
+                </a>
+                <div class="row card-body">
+                    
+                    <h6 style="font-size: 14px; font-family:'Poppins'; padding-top: 12px; color: var(--usafa-blue);" class="mtb"> MTB &nbsp;|&nbsp; 5'4 to 6' ft</h6>
+
+                    <div class="col" style="align-items: center;">
+                        
+                        <div class="row">
+                            <h6 style="font-size: 18px; font-weight: 600; font-family:'Poppins'; color: var(--prussian-blue);">
+                            <span style="font-size: 22px; font-family: 'Courier New', Courier, monospace; color:var(--prussian-blue);"> ₹</span> <span class="price">90</span><span style="font-size: 13px; color: var(--usafa-blue); font-weight: 400;"> / day </span>
+                            </h6>
+                         </div>
+                          <button class="productButton" id="pay1">BOOK NOW!</button>
+                    </div>
+                 </div>
+                 
+                 <script type="module">
+                    // Import the functions you need from the SDKs you need
+                    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+                    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+                    import { getAuth, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+                    import { getFirestore, collection, getDocs, getDoc, doc, onSnapshot, query, where }from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+  
+                    // TODO: Add SDKs for Firebase products that you want to use
+                    // https://firebase.google.com/docs/web/setup#available-libraries
+                  
+                    // Your web app's Firebase configuration
+                    const firebaseConfig = {
+                      apiKey: "AIzaSyDhbf_EDWMuDom50xR3zaLZO1K3D8JvwcY",
+                      authDomain: "authentication-7db2c.firebaseapp.com",
+                      databaseURL: "https://authentication-7db2c-default-rtdb.firebaseio.com",
+                      projectId: "authentication-7db2c",
+                      storageBucket: "authentication-7db2c.appspot.com",
+                      messagingSenderId: "297828324194",
+                      appId: "1:297828324194:web:290fdb0e97c29d8230d23b"
+                    };
+                  
+                    // Initialize Firebase
+                    initializeApp(firebaseConfig);
+                    const app = initializeApp(firebaseConfig);
+                    const database = getDatabase(app);
+                    const auth = getAuth(app);
+                    //init services
+                    const db = getFirestore();
+                    //collection ref
+                    const colRef = collection(db,'booking')
+                    logout.addEventListener('click',(e) => {
+                        signOut(auth).then(() => {
+                            alert("User logged out");
+                            window.location = "index.html";
+                        // Sign-out successful.
+                        })
+                        .catch((error) => {
+                            const errorCode = error.code;
+                            const errorMessage = error.message;
+                            alert(errorMessage);
+                            // ..
+                        });
+                
+                    });
+
+                    //get collection data
+                    getDocs(colRef)
+                        .then((snapshot) => {
+                            let books = []
+                            snapshot.docs.forEach((doc) => {
+                                books.push({ ...doc.data(), id: doc.id })
+                            })
+                            console.log(books);
+                            for (let i = 0; i < books.length; i++)
+                            {
+                                
+                                if(books[i].booked == true)
+                                {
+                                    console.log(books[i].booked)
+                                    let avail = document.getElementsByClassName('available')
+                                    avail[i].style.display = 'flex';
+                                    let outof = document.getElementsByClassName('outofstock')
+                                    outof[i].style.display = 'flex';
+                                    let product = document.getElementsByClassName('productButton')
+                                    product[i].style.display = 'none';
+                                    let date = document.getElementsByClassName('available')
+                                    date[i].innerHTML = "Available from : "+books[i].date;
+                                    var Udate = books[i].date;
+                                    var ToDate = new Date();
+                                    if(books[i].email == localStorage.getItem("email") )  
+                                    {
+                                      var pname;
+                                      console.log(books[i].id)
+                                      var select = document.getElementById('cart');
+                                        var opt = document.createElement('option');
+                                        opt.value = i;
+                                        if(books[i].id == "0IqMsfZAokDws2kmA9Dm")
+                                        pname ="Street Racer";
+                                        if(books[i].id == "9HZ3fQi5aqoZT0cX6wLH")
+                                        pname ="Atlas Mettle";
+                                        if(books[i].id == "Nz6DWzEjg5PCFotEKATl")
+                                        pname ="Kross Eco";
+                                        if(books[i].id == "OSTatB62PNqYrARavoR1")
+                                        pname ="Hercules Brut";
+                                        if(books[i].id == "P2FRLLo3bOVCt9P1XUTf")
+                                        pname ="Hercules Roadeo Hank";
+                                        if(books[i].id == "TmDydf5KWEfAzLkhqRvM")
+                                        pname ="Hero Sprint Tomboy";
+                                        if(books[i].id == "TvuVdO22Sn9txQaXPi4d")
+                                        pname ="Xtal Muse";
+                                        if(books[i].id == "VamYz94bjkWMMF4OS9qB")
+                                        pname ="Hercules FX 100";
+                                        if(books[i].id == "WtFqwW2kAvjF13Y4UoGN")
+                                        pname ="Hercules Rocky";
+                                        if(books[i].id == "cOlFiCUMqFJ5DMWwkoMR")
+                                        pname ="Btwin My Bike";
+                                        if(books[i].id == "eSKD0efpUCXdMiMoSqiv")
+                                        pname ="Hero Ranger";
+                                        if(books[i].id == "rYcscfqF8VP58JmZkPAw")
+                                        pname ="Btwin Riverside 50";
+
+                                        opt.disabled = true;
+                                        opt.innerHTML = pname;
+                                        select.appendChild(opt);
+                         
+                                    }
+                                    
+                                }
+                            }
+                            
+                        })
+                        .catch(err => {
+                            console.log(err.message);
+                        })
+
+                     //single doc
+                     const docRef = doc(db, 'booking', '9HZ3fQi5aqoZT0cX6wLH');
+
+                     onSnapshot(docRef, (doc) =>{
+                            console.log(doc.data(), doc.id);
+
+                            
+                        })
+                        
+                            
+
+                        
+                  </script>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <footer class="text-center text-white" style="background-color: #caced1;">
+        <h3 class="welcome" style="color: #274c77ff;">Some of the cycles you may like</h3>
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Images -->
+          <section class="">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                ><a href="#row1">
+                  <img
+                    src="pic3.png"
+                    class="w-100"
+                    
+                  /></a>
+                  <a >
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                 <a href=""><img
+                    src="pic4.png"
+                    class="w-100"
+                  /></a> 
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <a href="#row2"><img
+                    src="pic6.png"
+                    class="w-100"
+                  /></a>
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <a href="#row4"><img
+                    src="pic12.png"
+                    class="w-100"
+                  /></a>
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <a href="#row2"><img
+                    src="pic5.png"
+                    class="w-100"
+                  /></a>
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <a href="#row3"><img
+                    src="pic9.png"
+                    class="w-100"
+                  /></a>
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Images -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">©️Pedal On by FullStackers</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <script defer src="book.js"></script>
+</body>
+    
+</html>
+
+<!--
+    <form action="booknow.html">
+                    <div class="payment" >
+                        
+                        <h1 class="payTitle">Personal Information</h1>
+                        <label>Name and Surname</label>
+                        <input type="text" placeholder="John Doe" class="payInput" required>
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="+1 234 5678" class="payInput" required>
+                        <label>Address</label>
+                        <input type="text" placeholder="Elton St 21 22-145" class="payInput" required>
+                        <h1 class="payTitle">Card Information</h1>
+                        <div class="cardIcons">
+                            <img src="visa.png" width="40" alt="" class="cardIcon">
+                            <img src="master.png" alt="" width="40" class="cardIcon">
+                        </div>
+                        <input type="password" class="payInput" placeholder="Card Number" required maxlength="16" minlength="16">
+                        <div class="cardInfo">
+                            <input type="number" placeholder="mm" class="payInput sm" required max="12" min="1">
+                            <input type="number" placeholder="yyyy" class="payInput sm" required min="2023">
+                            <input type="password" placeholder="cvv" class="payInput sm" required minlength="3" maxlength="3">
+                        </div>
+                        <input  type="button" class="payButton">
+                        <span class="close">X</span>
+                    </div>
+                    </form>
+-->
